@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Gulliver Traveler | Cadastro de ponto Turistico</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <link rel="mask-icon" href="./assets/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form__container">
+            <h2>
+                Cadastro de ponto Turistico
+                <img class="destination" src="./assets/destination.png" alt="">
+            </h2>
+
+            <form action="">
+                <div class="contents">
+                    <div class="in__line">
+                        <label for="name">Nome do ponto Turistico </label>
+                    </div>
+                    <div class="in__line">
+                        <input type="text" id="name" placeholder="Ex: Praia Grande" autofocus required />
+                        <label for="image" class="image">Anexar Imagens</label>
+                        <input type="file" name="image" id="image" accept="image/png, image/jpeg" />
+                    </div>
+
+                </div>
+
+                <h4>Localização:</h4>
+                <div class="contents">
+                    <div class="in__line">
+                        <label for="street">Rua</label>
+                        <label for="number">Número</label>
+                        <label for="district">Bairro</label>
+                    </div>
+
+                    <div class="in__line">
+                        <input type="text" id="street" required placeholder="Ex: Rua Anny" />
+                        <input type="text" id="number" required placeholder="Ex: 10" />
+                        <input type="text" id="district" required placeholder="Ex: São João" />
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="in__line">
+                        <label for="cep">CEP</label>
+                        <label for="city">Cidade</label>
+                        <label for="state">Estado</label>
+                    </div>
+
+                    <div class="in__line">
+                        <input type="text" id="cep" required placeholder="Ex: 12345-678" />
+                        <input type="text" id="city" required placeholder="Ex: São Paulo" />
+                        <input list="uf" id="state" class="lista" required placeholder="Ex: Selecione o estado" />
+                        <datalist id="uf">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </datalist>
+                    </div>
+                </div>
+                <hr />
+
+                <h4>Contato:</h4>
+                <div class="contents">
+                    <div class="in__line">
+                        <label for="tel">Telefone</label>
+                        <label for="email">Classificação</label>
+                        <label for="date">Data do Cadastro</label>
+                    </div>
+
+                    <div class="in__line">
+                        <input type="tel" id="tel" required placeholder="Ex: (00) 91234-5678" />
+
+                        <select name="classification" id="classification">
+                            <option value="1 estrela">⭐️</option>
+                            <option value="2 estrelas">⭐️⭐️</option>
+                            <option value="3 estrelas">⭐️⭐️⭐️</option>
+                            <option value="4 estrelas">⭐️⭐️⭐️⭐️</option>
+                            <option value="5 estrelas">⭐️⭐️⭐️⭐️⭐️</option>
+                        </select>
+
+                        <input type="date" id="date" required />
+                    </div>
+                </div>
+                <hr />
+
+                <h4>Informações:</h4>
+                <div class="contents">
+                    <div class="in__line">
+                        <label for="value">Valor da diária/serviço</label>
+                        <label for="email">E-mail</label>
+                        <label for="site">Site</label>
+                    </div>
+
+                    <div class="in__line">
+                        <input type="number" id="value" required placeholder="Ex: 500.00" />
+                        <input type="email" id="email" required placeholder="Ex: contato@gullivertraveler.com" />
+                        <input type="url" id="site" required placeholder="Ex: www.gullivertraveler.com" />
+                    </div>
+                </div>
+
+                <div class="button">
+                    <button type="submit">Registrar</button>
+                </div>
+            </form>
+        </div>
+
+        <div>
+            <img class="avatar" src="./assets/avatar_traveler.png" alt="">
+        </div>
+    </div>
+    <footer><strong> Criado por Luciana Pereira ⛵ Copyright © 2022</strong></footer>
+</body>
+
+</html>
